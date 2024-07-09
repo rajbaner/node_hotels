@@ -26,7 +26,7 @@ num_sales:{
 type:Number,
 default:0,
 },
-
+//
 })
 const MenuItem = mongoose.model('MenuItem',menuschema);
 module.exports = MenuItem;
