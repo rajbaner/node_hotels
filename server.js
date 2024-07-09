@@ -60,6 +60,7 @@ const express = require('express')
 const app = express();
 const db = require('./db');
 const MenuItem = require('./models/Menu')
+require('dotenv').config();
 
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
@@ -187,6 +188,8 @@ app.get('/', function (req, res) {
  const menuroutes = require('./routes/menuRoutes');
  app.use('/menu',menuroutes);
  app.use('/person',personroutes);
+ const PORT = process.env.PORT||3000;
+ 
 // })
 // app.get('/chicken',function(req,res){
 //     res.send('Sure Sir,I would like the chicken')
